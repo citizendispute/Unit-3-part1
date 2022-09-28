@@ -147,6 +147,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="U4b-NQ-8RC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="bcl-zn-Aj6" kind="presentation" id="ANS-rd-OGe"/>
                             </connections>
