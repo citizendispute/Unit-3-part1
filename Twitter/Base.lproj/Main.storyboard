@@ -77,8 +77,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Its a doggy dog world" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHu-1c-B7Q">
-                                            <rect key="frame" x="73" y="37" width="321" height="72"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Its a doggy dog world" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHu-1c-B7Q">
+                                            <rect key="frame" x="73" y="0.0" width="321" height="72"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="72" id="3ia-ad-OTL"/>
                                             </constraints>
@@ -86,6 +86,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-hI-dPa">
+                                            <rect key="frame" x="348" y="80" width="30" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="favor-icon"/>
+                                            <connections>
+                                                <action selector="favoriteTweet:" destination="VAd-pk-GC1" eventType="touchUpInside" id="zSH-Mo-5T8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JB-AS-2xm">
+                                            <rect key="frame" x="307" y="80" width="45" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="retweet-icon"/>
+                                            <connections>
+                                                <action selector="retweet:" destination="VAd-pk-GC1" eventType="touchUpInside" id="Rbd-Zp-n07"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="XHu-1c-B7Q" firstAttribute="bottom" secondItem="oC1-6s-C8e" secondAttribute="bottomMargin" id="1g1-0w-qG5"/>
@@ -107,7 +125,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favButton" destination="GQe-hI-dPa" id="67O-92-Zq0"/>
                                     <outlet property="profileImageView" destination="Kjn-wo-8va" id="fr1-n3-WMF"/>
+                                    <outlet property="retweetButton" destination="3JB-AS-2xm" id="BQ5-3Q-SIA"/>
                                     <outlet property="tweetContent" destination="XHu-1c-B7Q" id="tM9-Ge-LFA"/>
                                     <outlet property="userNameLabel" destination="T71-Yc-Afg" id="hUp-1V-Vid"/>
                                 </connections>
@@ -238,6 +258,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favor-icon" width="30" height="30"/>
+        <image name="retweet-icon" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
